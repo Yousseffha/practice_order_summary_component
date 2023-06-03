@@ -1,0 +1,132 @@
+/* start variables */
+:root {
+    --Blue: #1f2630;
+    --Black: #141519;
+    --Orange: #fc7613;
+    --BlueSecondColor: #232f3b;
+    --MainTransition: 0.3s;
+}
+/* end variables */
+/* start global rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Black);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.container {
+    background-color: var(--Blue);
+    width: 30%;
+    height: fit-content;
+    padding: 30px;
+    color: #fff;
+    border-radius: 20px;
+}
+/* end global rules */
+/* start components */
+.box p {
+    font-size: 11px;
+    color: #9198a2;
+}
+.box h3 {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+/* end components */
+/* start first box */
+.container .f-box img {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--BlueSecondColor);
+    border-radius: 50%;
+}
+.container .f-box ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 15px 0;
+}
+.container .f-box ul li {
+    width: 35px;
+    height: 35px;
+    background-color: var(--BlueSecondColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--MainTransition);
+}
+.container .f-box ul li:hover {
+    background-color: var(--Orange);
+}
+.container .f-box #btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: var(--Orange);
+    cursor: pointer;
+    transition: var(--MainTransition);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+}
+.container .f-box #btn:hover {
+    background-color: #fff;
+    color: var(--Orange);
+}
+/* end first box */
+/* start thank you section */
+.thank-you {
+    text-align: center;
+    display: none;
+}
+.thank-you .rating {
+    font-size: 12px;
+    color: var(--Orange);
+    background-color: var(--BlueSecondColor);
+    padding: 5px 10px;
+    width: fit-content;
+    margin: 0 auto 15px auto;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+.thank-you img {
+    margin-bottom: 10px;
+    width: 100px;
+    height: 75px;
+}
+/* end thank you section */
+
+.selected {
+    background-color: var(--Orange) !important;
+}
+
+@media(max-width:480px) {
+    .container {
+        width: 80%;
+    }
+}
+@media(min-width:481px) {
+    .container {
+        width: 45%;
+    }
+}
+@media(min-width:971px) {
+    .container {
+        width: 30%;
+    }
+}
